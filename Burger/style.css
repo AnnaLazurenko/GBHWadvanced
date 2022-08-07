@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 20px;
+
+    background-color: blanchedalmond;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+legend {
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+h4 {
+    text-align: center;
+    margin: 10px auto;
+    font-size: large;
+}
+
+label {
+    /*margin: 20px auto;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+input:checked + label{
+    background-color: sandybrown;
+}
+
+label:hover {
+    cursor: pointer;
+    background-color: burlywood;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+}
+.size {
+    flex-direction: column;
+}
+
+#check {
+    background-color: sandybrown;
+    border-radius: 5;
+    width: 100px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#check:hover {
+    cursor: pointer;
+    background-color: burlywood;
+}
+
+#check:active {
+    background-color: sandybrown;
+}
