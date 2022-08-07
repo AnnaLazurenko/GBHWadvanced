@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="container">
+    <form action="#" id="hamburger-form">
+        <fieldset id="hamburger-fieldset">
+            <legend>Get your burger</legend>
+
+            <fieldset class="hamburger-fieldset-inside">
+                <h4>Choose the size:</h4>
+                <div class="field size">
+                <input type="radio" name="size" id="big-burger" value="Big" class="hamburger-input" data-price="100" data-calories="40" checked>
+                <label for="big-burger">Big ($100, 40 Kcal)</label>
+
+                <input type="radio" name="size" id="small-burger" value="Small" class="hamburger-input" data-price="50" data-calories="20">
+                <label for="small-burger">Small ($50, 20 Kcal)</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="hamburger-fieldset-inside">
+                <h4>Choose toppings:</h4>
+                <div class="field">
+                <input type="checkbox" name="toppings" id="cheese" value="Cheese" class="hamburger-input" data-price="10" data-calories="20">
+                <label for="cheese">Cheese ($10, 20Kcal)</label>
+
+                <input type="checkbox" name="toppings" id="letuce" value="Letuce" class="hamburger-input" data-price="20" data-calories="5">
+                <label for="letuce">Letuce ($20, 5Kcal)</label>
+
+                <input type="checkbox" name="toppings" id="hash-brawn" value="Hash-brawn" class="hamburger-input" data-price="15" data-calories="10">
+                <label for="hash-brawn">Hash brawn ($15, 10Kcal)</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="hamburger-fieldset-inside">
+                <h4>What else?</h4>
+                <div class="field">
+                <input type="checkbox" name="extras" id="mayo" value="Mayo" class="hamburger-input" data-price="20" data-calories="5">
+                <label for="mayo">Mayo ($20, 5Kcal)</label>
+
+                <input type="checkbox" name="extras" id="spices" value="Spices" class="hamburger-input" data-price="15" data-calories="0">
+                <label for="spices">Spices ($15, 0Kcal)</label>
+
+                </div>
+            </fieldset>
+            <div id="check">Get burger</div>
+
+            <p id="result">Total: <span id="price">0</span>
+                <br>
+            Calories: <span id="calories">0</span></p>
+
+        </fieldset>
+
+    </form>
+
+
+
+</section>
+
+<script src="js.js"></script>
+<script>
+    window.onload = ()=> {
+        document.getElementById('check').addEventListener('click', ()=> {
+            let burger = new Burger('size', 'toppings', 'extras');
+            console.log(burger);
+            burger.showSum('#price', '#calories');
+        });
+    }
+</script>
+</body>
+</html>
