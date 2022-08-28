@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="replaced-quotes">
+        <h3>Текст с замененными кавычками, но оставленными апострофами:</h3>
+
+    </div>
+    <form action="#" class="form" id="form">
+            <div class="contacts">
+                <div>
+                    <label>
+                        <input type="text" placeholder="Name" name="name" id="name">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="tel" placeholder="Phone number"  name="phone" id="phone">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="email" placeholder="E-mail" name="email" id="email">
+                    </label>
+                </div>
+                <button>Submit</button>
+            </div>
+    </form>
+
+    <script src="main.js"></script>
+    <script>
+    window.onload = () => {
+        document.getElementById('form').addEventListener('submit', e => {
+            let valid = new Validator('form');
+            if(!valid.valid){
+                e.preventDefault();
+            }
+        })
+    }
+    </script>
+</body>
+</html>
